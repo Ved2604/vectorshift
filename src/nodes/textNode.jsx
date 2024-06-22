@@ -1,3 +1,16 @@
+// TextNode.jsx
+import { BaseNode } from './BaseNode';
+import { Position } from 'reactflow';
+export const TextNode = (props) => {
+  const handles = [
+    { id: 'output', type: 'source', position: Position.Right },
+  ];
+
+  return <BaseNode {...props} type="Text" handles={handles} />;
+};
+
+
+/*
 // textNode.js
 
 import { useState } from 'react';
@@ -33,3 +46,5 @@ export const TextNode = ({ id, data }) => {
     </div>
   );
 }
+
+*/

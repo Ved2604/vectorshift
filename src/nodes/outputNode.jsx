@@ -1,3 +1,17 @@
+// OutputNode.jsx
+import { BaseNode } from './BaseNode';
+import { Position } from 'reactflow';
+
+export const OutputNode = (props) => {
+  const handles = [
+    { id: 'value', type: 'target', position: Position.Left },
+  ];
+
+  return <BaseNode {...props} type="Output" handles={handles} />;
+};
+
+
+/*
 // outputNode.js
 
 import { useState } from 'react';
@@ -44,4 +58,5 @@ export const OutputNode = ({ id, data }) => {
       </div>
     </div>
   );
-}
+} 
+*/

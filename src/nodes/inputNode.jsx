@@ -1,3 +1,19 @@
+// InputNode.jsx
+import { BaseNode } from './BaseNode';
+import { Position } from 'reactflow';
+
+export const InputNode = (props) => {
+  const handles = [
+    { id: 'value', type: 'source', position: Position.Right },
+  ];
+
+  return <BaseNode {...props} type="Input" handles={handles} />;
+};
+
+
+
+/*
+Original code 
 // inputNode.js
 
 import { useState } from 'react';
@@ -45,3 +61,4 @@ export const InputNode = ({ id, data }) => {
     </div>
   );
 }
+*/

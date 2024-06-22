@@ -1,4 +1,20 @@
-// llmNode.js
+// LLMNode.jsx
+import { BaseNode } from './BaseNode';
+import { Position } from 'reactflow';
+
+export const LLMNode = (props) => {
+  const handles = [
+    { id: 'system', type: 'target', position: Position.Left, style: { top: '33%' } },
+    { id: 'prompt', type: 'target', position: Position.Left, style: { top: '66%' } },
+    { id: 'response', type: 'source', position: Position.Right },
+  ];
+
+  return <BaseNode {...props} type="LLM" handles={handles} />;
+};
+
+
+/* 
+ // llmNode.js
 
 import { Handle, Position } from 'reactflow';
 
@@ -32,3 +48,4 @@ export const LLMNode = ({ id, data }) => {
     </div>
   );
 }
+*/
